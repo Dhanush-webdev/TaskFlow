@@ -42,62 +42,65 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
+      <entry key="MS100" value="5.94266663417162E-68" />
+      <entry key="MS500" value="3.5876260926909524E-14" />
+      <entry key="S2" value="4.660146893142999E-4" />
+      <entry key="S5" value="0.0609191180808466" />
+      <entry key="S10" value="0.3379206499536097" />
+      <entry key="S30" value="1.100895700761807" />
+      <entry key="S60" value="1.5511226998288097" />
+      <entry key="M2" value="2.2648083989081953" />
+      <entry key="M5" value="5.769666761444862" />
+      <entry key="M10" value="13.670954620815513" />
+      <entry key="M15" value="21.864130087545753" />
+      <entry key="M30" value="44.63889504590206" />
+      <entry key="H1" value="83.90540339442039" />
+      <entry key="H2" value="157.3788346099957" />
+      <entry key="H4" value="276.2124862098583" />
+      <entry key="D1" value="542.9931705155777" />
+      <entry key="W1" value="622.3302212360038" />
+    </decayedCancelled>
+    <decayedSelected>
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
       <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0000000283326822" />
-      <entry key="S10" value="1.0002586102461282" />
-      <entry key="S30" value="1.185964921161303" />
-      <entry key="S60" value="2.3069803509490123" />
-      <entry key="M2" value="5.106273207170499" />
-      <entry key="M5" value="10.856133380837154" />
-      <entry key="M10" value="17.7051939549744" />
-      <entry key="M15" value="24.011889370256352" />
-      <entry key="M30" value="42.81285294666204" />
-      <entry key="H1" value="85.03922224857976" />
-      <entry key="H2" value="165.28224544238165" />
-      <entry key="H4" value="265.68895285626996" />
-      <entry key="D1" value="430.02491363113535" />
-      <entry key="W1" value="470.74259531661977" />
-    </decayedCancelled>
-    <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="2.7210730464901953E-81" />
-      <entry key="S2" value="7.222458417384015E-21" />
-      <entry key="S5" value="8.779585818709719E-9" />
-      <entry key="S10" value="9.371238664717886E-5" />
-      <entry key="S30" value="0.04776836814228922" />
-      <entry key="S60" value="0.2623490012825233" />
-      <entry key="M2" value="0.7107302817376998" />
-      <entry key="M5" value="1.7185371826725249" />
-      <entry key="M10" value="3.4899769274589856" />
-      <entry key="M15" value="5.416230133967749" />
-      <entry key="M30" value="11.509775674700297" />
-      <entry key="H1" value="24.559367289977533" />
-      <entry key="H2" value="45.09011188295629" />
-      <entry key="H4" value="66.16462635775773" />
-      <entry key="D1" value="95.27296781866845" />
-      <entry key="W1" value="101.84828436044964" />
+      <entry key="S5" value="1.0000000000000087" />
+      <entry key="S10" value="1.0000001213183196" />
+      <entry key="S30" value="1.008468397534713" />
+      <entry key="S60" value="1.1553291703544746" />
+      <entry key="M2" value="1.8363047393553975" />
+      <entry key="M5" value="4.70546931269351" />
+      <entry key="M10" value="9.201971822254487" />
+      <entry key="M15" value="12.787857103596957" />
+      <entry key="M30" value="19.726726528650833" />
+      <entry key="H1" value="28.07034978047698" />
+      <entry key="H2" value="43.93627872828387" />
+      <entry key="H4" value="69.41088599761221" />
+      <entry key="D1" value="121.73755882193625" />
+      <entry key="W1" value="136.33771094996712" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.719792642279683E-7" />
-      <entry key="MS500" value="0.048630323534713665" />
-      <entry key="S2" value="0.4695985959298581" />
-      <entry key="S5" value="0.7390787836941045" />
-      <entry key="S10" value="0.8600246710256509" />
-      <entry key="S30" value="1.176764188711007" />
-      <entry key="S60" value="2.5119013235696452" />
-      <entry key="M2" value="5.749648202525948" />
-      <entry key="M5" value="12.51561596780477" />
-      <entry key="M10" value="21.144448970294874" />
-      <entry key="M15" value="29.379305772322663" />
-      <entry key="M30" value="54.27274238996835" />
-      <entry key="H1" value="109.54627050413727" />
-      <entry key="H2" value="210.32533422765331" />
-      <entry key="H4" value="331.81954576634524" />
-      <entry key="D1" value="525.2898103690036" />
-      <entry key="W1" value="572.5896495876785" />
+      <entry key="MS100" value="3.9390366672862584E-30" />
+      <entry key="MS500" value="1.3154610862470793E-6" />
+      <entry key="S2" value="0.03407964912698054" />
+      <entry key="S5" value="0.29522590147384686" />
+      <entry key="S10" value="0.7479559187888772" />
+      <entry key="S30" value="1.7577001948180657" />
+      <entry key="S60" value="2.460345410515562" />
+      <entry key="M2" value="3.903064428856518" />
+      <entry key="M5" value="10.321323919402605" />
+      <entry key="M10" value="22.747244079279657" />
+      <entry key="M15" value="34.54254176794171" />
+      <entry key="M30" value="64.28570338846096" />
+      <entry key="H1" value="111.91975868043059" />
+      <entry key="H2" value="201.27107317667588" />
+      <entry key="H4" value="345.5884512299377" />
+      <entry key="D1" value="664.7205259841434" />
+      <entry key="W1" value="758.6663006445077" />
     </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0,
@@ -108,30 +111,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\WebStorm 2026.2.0.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "javascript.preferred.runtime.type.id": "node",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "D:\\WebStorm 2026.2.0.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external"
   }
-}</component>
+}]]></component>
+  <component name="QodanaHighlightedReportService">
+    <option name="localRunNotPublishedPersistedInfo">
+      <LocalReportPersistedInfo>
+        <option name="path" value="C:\Users\DHANUS~1\AppData\Local\Temp\qodana_output\qodana.sarif.json" />
+        <option name="reportGuid" value="24f026c9-1cd0-410a-bcf8-62d504d0b09e" />
+        <option name="reportName" value="TaskFlow/qodana/2026-08-08" />
+      </LocalReportPersistedInfo>
+    </option>
+  </component>
+  <component name="QodanaIsSelectedPersistenceService">
+    <option name="selectedOrLoading" value="true" />
+  </component>
+  <component name="QodanaReportsService">
+    <option name="descriptions">
+      <ReportDescription localRun="true" path="C:\Users\DHANUS~1\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="24f026c9-1cd0-410a-bcf8-62d504d0b09e" reportId="TaskFlow/qodana/2026-08-08" />
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Dhanush R\OneDrive\Desktop\TaskFlow\Frontend\src\assets" />
@@ -154,7 +173,7 @@
       <updated>1786105839371</updated>
       <workItem from="1786105840450" duration="172000" />
       <workItem from="1786106088984" duration="13200000" />
-      <workItem from="1786159953533" duration="6897000" />
+      <workItem from="1786159953533" duration="13156000" />
     </task>
     <servers />
   </component>

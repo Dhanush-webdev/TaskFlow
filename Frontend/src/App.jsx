@@ -20,9 +20,14 @@ const App = () => {
         setTitle("");
         setDescription("");
     };
+    const deleteTask = (index) => {
+        const newTask = [...allTasks];
+        newTask.splice(index, 1);
+        setAllTasks(newTask)
+    }
 
     return (
-        <div className="flex h-screen w-full">
+        <div className="flex bg-yellow-100 h-screen w-full">
             {/* LEFT SIDE */}
             <div className="max-h-full flex flex-col w-2/7">
                 <div className="mx-2 my-3 px-3 py-10 border-2 border-[#556B2F] h-full rounded-lg">
@@ -46,9 +51,11 @@ const App = () => {
 
                         {allTasks.map((task, index) => (
                             <MyTasks
+                                index = {index}
                                 key={index}
                                 title={task.title}
                                 description={task.description}
+                                onDelete = {deleteTask}
                             />
                         ))}
 
