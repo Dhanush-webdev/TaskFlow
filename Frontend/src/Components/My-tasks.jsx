@@ -1,19 +1,55 @@
-// Components/My-tasks.jsx
-import {useState} from 'react'
+import { useState } from "react";
 
+const MyTasks = ({
+                     title,
+                     description,
+                     onDelete,
+                     onEdit,
+                     index,
+                 }) => {
 
-const MyTasks = ({ title, description, onDelete,index }) => {
-    const [completed, setCompleted] = useState(false)
+    const [completed, setCompleted] = useState(false);
+
     return (
-        <div className="flex justify-between items-center">
-            <div className={`${completed ? "border-green-700 ":"border-red-700"} w-4/6 p-2 my-2 border cursor-pointer rounded-xl`}>
-                <h3 onClick={()=> {
-                    setCompleted(!completed)
-                    console.log(completed)
-                }} className={completed ? "line-through":""}>{title}</h3>
-                {/*<p className="text-xs pl-2">{description}</p>*/}
+        <div
+            className={`${
+                completed
+                    ? "border-green-700"
+                    : "border-red-700"
+            } border-2 flex  p-2 my-2 justify-between w-full rounded-xl`}
+        >
+
+            <div className="flex flex-col ">
+                <h3
+                    onClick={() => {
+                        setCompleted(!completed);
+                    }}
+                    className={`${completed ? "line-through" : ""} font-bold cursor-pointer rounded-lg  `}
+                >
+                    {title}
+                </h3>
+
+                <p className="text-sm text-gray-600 ml-2">
+                    {description}
+                </p>
             </div>
-            <button className="rounded-xl px-3 py-2 my-0 bg-red-700 text-white" onClick={()=>onDelete(index)}>Delete</button>
+
+            <div className="flex  gap-3">
+                <button
+                    className="rounded-xl px-3 py-2 my-0 bg-red-700 text-white"
+                    onClick={() => onDelete(index)}
+                >
+                    Delete
+                </button>
+
+                <button
+                    className="rounded-xl px-3 py-2 my-0 bg-blue-700 text-white"
+                    onClick={() => onEdit(index)}
+                >
+                    Edit
+                </button>
+            </div>
+
         </div>
     );
 };
