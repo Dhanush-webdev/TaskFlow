@@ -1,10 +1,11 @@
 import {useState} from "react";
+import EditTodo from "./EditTodo.jsx";
 
 const MyTasks = ({
                      title,
                      description,
                      onDelete,
-
+                     onUpdated,
                      todo_id,
 
                  }) => {
@@ -35,7 +36,17 @@ const MyTasks = ({
                 </p>
             </div>
 
+
             <div className="flex  gap-3">
+                <button>
+                    <EditTodo
+                        todo_id={todo_id}
+                        title={title}
+                        description={description}
+                        onUpdated={onUpdated}
+                    />
+
+                </button>
                 <button
                     className="rounded-xl px-3 py-2 my-0 bg-red-700 text-white"
                     onClick={() => onDelete(todo_id)}

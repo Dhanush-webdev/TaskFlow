@@ -60,7 +60,15 @@ const App = () => {
     // EDIT TASK
     // -----------------------------
 
-
+    const updateTask = (updatedTodo) => {
+        setAllTasks((prevTasks) =>
+            prevTasks.map((task) =>
+                task.todo_id === updatedTodo.todo_id
+                    ? updatedTodo
+                    : task
+            )
+        );
+    };
     // -----------------------------
     // DELETE TASK
     // -----------------------------
@@ -157,6 +165,7 @@ const App = () => {
                                 title={task.title}
                                 description={task.description}
                                 onDelete={deleteTask}
+                                onUpdated={updateTask}
 
                             />
 
