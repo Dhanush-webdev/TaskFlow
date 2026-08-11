@@ -13,13 +13,13 @@ app.use(express.json());
 //  ROUTES
 // CREATING TODOS
 
-app.post("/addingtodos", async(req, res) => {
-    try{
-        const {task, description} = req.body;
-        const newtodo = await pool.query("INSERT INTO todos (task, description) VALUES ($1,$2) RETURNING *",[task,description]);
+app.post("/addingtodos", async (req, res) => {
+    try {
+        const {title, description} = req.body;
+        const newtodo = await pool.query("INSERT INTO todos (title, description) VALUES ($1,$2) RETURNING *", [title, description]);
         res.send(newtodo.rows[0]);
-    }catch(e){
-       console.error(e);
+    } catch (e) {
+        console.error(e);
     }
 })
 
@@ -31,26 +31,43 @@ app.get('/getalltodos', async (req, res) => {
 })
 
 //GETTING SINGLE TODOS
-app.get('/gettingtodo/:id', async(req, res) => {
-    try{
+app.get('/gettingtodo/:id', async (req, res) => {
+    try {
 
-            const {id}= req.params;
-            const singleTodo = await pool.query("SELECT * FROM todos WHERE todo_id = ($3) RETURNING * ",[id]);
-            res.send(singleTodo.rows[0]);
+        const {id} = req.params;
+        const singleTodo = await pool.query("SELECT * FROM todos WHERE todo_id = ($1) ", [id]);
+        res.send(singleTodo.rows[0]);
 
-    }catch (e){
+    } catch (e) {
         console.error(e);
     }
 })
 
 //DELETING TODOS
+app.delete('/deletetodo/:id', async (req, res) => {
+    try {
+        const {id} = req.params;
+        const deleteTodo = await pool.query("DELETE FROM todos WHERE todo_id = ($1) RETURNING *", [id]);
+        res.send(deleteTodo.rows[0]);
+    } catch (err) {
+        console.error(err);
+    }
+})
 
 
 //EDITING TODOS
+app.put('/updatetodo/:id', async (req, res) => {
+    try {
+        const {id} = req.params;
+        const {title, description} = req.body;
+        const updateTask = await pool.query("UPDATE todos SET title = $1, description = $2 WHERE todo_id = $3 RETURNING *", [title, description, id]);
+        res.send(updateTask.rows[0]);
+    } catch (err) {
+        console.error(err);
+    }
+})
 
 
-
-
-app.listen(PORT,()=>{
+app.listen(PORT, () => {
     console.log("Server started on port: " + PORT);
 });

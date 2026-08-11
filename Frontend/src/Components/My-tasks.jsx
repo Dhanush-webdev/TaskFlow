@@ -1,11 +1,12 @@
-import { useState } from "react";
+import {useState} from "react";
 
 const MyTasks = ({
                      title,
                      description,
                      onDelete,
-                     onEdit,
-                     index,
+
+                     todo_id,
+
                  }) => {
 
     const [completed, setCompleted] = useState(false);
@@ -37,17 +38,12 @@ const MyTasks = ({
             <div className="flex  gap-3">
                 <button
                     className="rounded-xl px-3 py-2 my-0 bg-red-700 text-white"
-                    onClick={() => onDelete(index)}
+                    onClick={() => onDelete(todo_id)}
                 >
                     Delete
                 </button>
 
-                <button
-                    className="rounded-xl px-3 py-2 my-0 bg-blue-700 text-white"
-                    onClick={() => onEdit(index)}
-                >
-                    Edit
-                </button>
+
             </div>
 
         </div>

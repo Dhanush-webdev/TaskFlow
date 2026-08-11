@@ -1,6 +1,7 @@
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import profilepic from "./assets/profilepic.svg";
 import MyTasks from "./Components/My-tasks.jsx";
+
 
 const App = () => {
     // -----------------------------
@@ -12,34 +13,42 @@ const App = () => {
     const [search, setSearch] = useState("");
 
     const [allTasks, setAllTasks] = useState([]);
-    const [editIndex, setEditIndex] = useState(null);
+
+
+    const getTodos = async () => {
+        try {
+            const response = await fetch("http://localhost:5000/getalltodos");
+            const data = await response.json();
+            setAllTasks(data);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+    useEffect(() => {
+        getTodos();
+    },)
 
     // -----------------------------
     // CREATE / UPDATE TASK
     // -----------------------------
 
-    const handleSubmit = () => {
-        if (editIndex !== null) {
-            // UPDATE EXISTING TASK
-
-            const updatedTasks = [...allTasks];
-
-            updatedTasks[editIndex] = {
-                title,
-                description,
-            };
-
-            setAllTasks(updatedTasks);
-            setEditIndex(null);
-        } else {
+    const handleSubmit = async e => {
+        e.preventDefault();
+        {
             // CREATE NEW TASK
 
-            const newTask = {
-                title: title,
-                description: description,
-            };
+            try {
+                const body = {description, title};
+                const response = await fetch("http://localhost:5000/addingtodos", {
+                    method: "POST",
+                    body: JSON.stringify(body),
+                    headers: {"Content-Type": "application/json"}
+                })
 
-            setAllTasks([...allTasks, newTask]);
+            } catch (e) {
+                console.log(e)
+            }
         }
 
         // Clear input boxes
@@ -51,34 +60,19 @@ const App = () => {
     // EDIT TASK
     // -----------------------------
 
-    const editTask = (index) => {
-        setTitle(allTasks[index].title);
-        setDescription(allTasks[index].description);
-        setEditIndex(index);
-    };
 
     // -----------------------------
     // DELETE TASK
     // -----------------------------
 
-    const deleteTask = (index) => {
-        const newTask = [...allTasks];
-
-        newTask.splice(index, 1);
-
-        setAllTasks(newTask);
-
-        // If the task being edited was deleted
-        if (editIndex === index) {
-            setEditIndex(null);
-            setTitle("");
-            setDescription("");
-        }
-
-            // If a task before the task being edited was deleted,
-        // the edit index needs to move one position backward.
-        else if (editIndex !== null && editIndex > index) {
-            setEditIndex(editIndex - 1);
+    const deleteTask = async (todo_id) => {
+        try {
+            const deleteTask = await fetch(`http://localhost:5000/deletetodo/${todo_id}`, {
+                method: "DELETE",
+            });
+            console.log(deleteTask)
+        } catch (err) {
+            console.log(err);
         }
     };
 
@@ -95,6 +89,7 @@ const App = () => {
     // -----------------------------
 
     return (
+
         <div className="flex bg-yellow-100 h-screen w-full">
 
             {/* =========================
@@ -105,7 +100,8 @@ const App = () => {
 
             <div className="w-2/7 h-full">
 
-                <div className="mx-2 my-3 px-3 py-10 border-2 border-[#556B2F] h-[calc(100%-1.5rem)] rounded-lg flex flex-col">
+                <div
+                    className="mx-2 my-3 px-3 py-10 border-2 border-[#556B2F] h-[calc(100%-1.5rem)] rounded-lg flex flex-col">
 
                     {/* PROFILE */}
 
@@ -152,15 +148,16 @@ const App = () => {
 
                     <div className="flex flex-col gap-2 mt-5 flex-1 min-h-0 overflow-y-auto">
 
-                        {searchTasks.map((task, index) => (
+                        {searchTasks.map((task) => (
 
                             <MyTasks
-                                key={index}
-                                index={index}
+                                key={task.todo_id}
+                                todo_id={task.todo_id}
+
                                 title={task.title}
                                 description={task.description}
                                 onDelete={deleteTask}
-                                onEdit={editTask}
+
                             />
 
                         ))}
@@ -227,32 +224,17 @@ const App = () => {
                         className="py-6 bg-green-500 text-white w-full border rounded-md"
                         onClick={handleSubmit}
                     >
-                        {editIndex !== null
-                            ? "UPDATE TASK"
-                            : "CREATE TASK"}
+                        CREATE TASK
                     </button>
 
 
                     {/* CANCEL EDIT BUTTON */}
 
-                    {editIndex !== null && (
-
-                        <button
-                            className="mt-2 py-2 bg-gray-500 text-white w-full border rounded-md"
-                            onClick={() => {
-                                setEditIndex(null);
-                                setTitle("");
-                                setDescription("");
-                            }}
-                        >
-                            CANCEL EDIT
-                        </button>
-
-                    )}
 
                 </div>
 
             </div>
+
 
         </div>
     );
