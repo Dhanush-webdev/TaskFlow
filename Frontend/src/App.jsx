@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import profilepic from "./assets/profilepic.svg";
 import MyTasks from "./Components/My-tasks.jsx";
+import {Routes, Route} from 'react-router-dom'
 
 
 const App = () => {
@@ -213,18 +214,6 @@ const App = () => {
 
 
                     {/* CATEGORY + DEADLINE */}
-
-                    <div className="flex justify-around items-center w-full">
-
-                        <button className="m-5 px-10 py-3 border rounded-xl bg-blue-700 text-white">
-                            Category
-                        </button>
-
-                        <button className="m-5 px-10 py-3 border rounded-xl bg-red-700 text-white">
-                            Deadline
-                        </button>
-
-                    </div>
 
 
                     {/* CREATE / UPDATE BUTTON */}
